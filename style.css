@@ -1,0 +1,144 @@
+:root {
+  --btn-color: #596d48;
+  --input-border: #e5e7eb;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: norse-bold;
+  src: url(assets/Norse-Bold.otf);
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+}
+.first {
+  position: relative;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  width: 40vw;
+}
+
+.first img {
+  flex-shrink: 0;
+  height: 100vh;
+  width: 40vw;
+  object-fit: fill;
+}
+
+.logo {
+  top: 20%;
+  padding: 1%;
+  position: fixed;
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  height: 12vh;
+  width: 38vw;
+  margin: 0 auto;
+}
+
+.logo p {
+  font-family: norse-bold, sans-serif;
+  color: white;
+  font-size: 10vh;
+  margin: 0;
+  position: relative;
+  top: 10%;
+  text-align: center;
+  justify-content: center;
+}
+
+.logo img {
+  height: 100%;
+  width: 5vw;
+  object-fit: contain;
+}
+
+.right {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 58vw;
+  height: 100vh;
+  background-color: white;
+}
+
+/* form {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  justify-content: center;
+  width: 40vw;
+} */
+
+form > div {
+  width: 40vw;
+  box-shadow: 0px 1px 15px black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4em;
+  gap: 15px;
+  padding: 20px;
+}
+
+form > button {
+  background-color: var(--btn-color);
+  color: white;
+  border-radius: 0.5em;
+  border-color: var(--input-border);
+  font-weight: bold;
+  padding: 1% 5%;
+  margin-top: 5%;
+}
+
+label {
+  text-transform: uppercase;
+  color: gray;
+  display: block;
+  text-align: start;
+}
+
+input {
+  border-color: var(--input-border);
+  border-style: groove;
+  border-radius: 0.2em;
+}
+
+input:focus {
+  border-style: solid;
+  border-color: blue;
+}
+
+input:valid {
+  border-color: green;
+}
+
+form > p > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--btn-color);
+}
+
+form > div > div + p {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
