@@ -129,7 +129,7 @@ label {
 input {
   border-color: var(--input-border);
   border-style: groove;
-  border-radius: 0.2em;
+  border-radius: 0.3em;
 }
 
 input:focus {
@@ -171,6 +171,10 @@ form > div > div + p {
 
   .logo {
     /* position: relative; */
-    height: 20%;
+    height: 15vh;
+  }
+
+  .first {
+    height: 40vh;
   }
 }
