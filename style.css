@@ -14,55 +14,56 @@ body {
 
 .container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: start;
 }
 .first {
   position: relative;
   float: left;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   flex-wrap: nowrap;
   height: 100vh;
   width: 40vw;
-}
-
-.first img {
-  flex-shrink: 0;
-  height: 100vh;
-  width: 40vw;
-  object-fit: fill;
+  background-image: url("assets/back.jpg");
+  background-size: cover;
 }
 
 .logo {
-  top: 20%;
-  padding: 1%;
-  position: fixed;
+  position: relative;
   background-color: black;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   opacity: 0.5;
   display: flex;
   flex-direction: row;
-  height: 12vh;
-  width: 38vw;
+  height: 15vh;
+  column-gap: 1vw;
+  flex: 1;
   margin: 0 auto;
 }
 
-.logo p {
+.logo > div > p {
   font-family: norse-bold, sans-serif;
   color: white;
-  font-size: 10vh;
+  font-size: 5em;
   margin: 0;
   position: relative;
-  top: 10%;
+  flex: center;
   text-align: center;
   justify-content: center;
+}
+
+.logo .img-container {
+  height: 100%;
+  width: auto;
 }
 
 .logo img {
   height: 100%;
-  width: 5vw;
+  width: auto;
   object-fit: contain;
 }
 
@@ -85,7 +86,7 @@ body {
 } */
 
 form > div {
-  width: 40vw;
+  width: 30vw;
   box-shadow: 0px 1px 15px black;
   display: flex;
   flex-flow: row wrap;
@@ -96,6 +97,17 @@ form > div {
   gap: 15px;
   padding: 20px;
 }
+
+form > div > div {
+  display: flex;
+  flex-grow: 0.5;
+  flex-shrink: 0.5;
+  flex-direction: column;
+}
+
+/* form > div > div {
+  flex: 1;
+} */
 
 form > button {
   background-color: var(--btn-color);
@@ -141,4 +153,24 @@ form > div > div + p {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .container > div {
+    width: 100vw;
+  }
+  form > div {
+    width: 70vw;
+  }
+
+  .logo {
+    /* position: relative; */
+    height: 20%;
+  }
 }
